@@ -24,6 +24,9 @@ body {
 	background-image:-moz-linear-gradient(left , #761542 0%, #991D57 52%, #761542 100%);
 	background-image:-webkit-linear-gradient(left , #761542 0%, #991D57 52%, #761542 100%);
 }
+th {
+	text-align: left;
+}
 .wrapper {
 	max-width:500px;
 	width:95%;
