@@ -15,7 +15,7 @@
 		<div id="main" style="padding:50px 0 0 0;">
 		
 		<!-- Form -->
-		<form id="contact-form" action="/" method="post">
+		<form id="contact-form" action="response.php" method="get">
 			<h3>HIA 3</h3>
 			<h4>This form should be completed for every case of suspected and confirmed concussion and for any player developing symptoms or signs after the game
 that may suggest the development of a delayed concussion. The form is to be completed after two nights’ sleep – including the night of the game.
@@ -51,13 +51,32 @@ that may suggest the development of a delayed concussion. The form is to be comp
 since the injury or following the Game which is
 not usually noted with Rugby.
 </h4>
+<table style="width 100%">
+  <tr>
+     <div>
+				<label><span><td>Headaches &nbsp &nbsp &nbsp</td></span>
+					<td><input type="checkbox" name="symptom[]" value="headaches"></td>
+			</div>
+  </tr>
+  <tr>
+    <div>
+				<label>
+					<td><span>'Pressure in head' &nbsp &nbsp &nbsp</span></td>
+					<td><input type="checkbox" name="symptom[]" value="pressure"></td>
+				</label>
+			</div></td>
+  </tr>
+</table>
+
+			
 			<div>
 				<label>
-					<span>Website: (required)</span>
-					<input placeholder="Begin with http://" type="url" tabindex="4" required>
+					<span>Neck pain &nbsp &nbsp &nbsp<input type="checkbox" name="symptom[]" value="neck pain"></span>
 				</label>
 			</div>
 			<div>
+
+			
 				<label>
 					<span>Message: (required)</span>
 					<textarea placeholder="Include all the details you can" tabindex="5" required></textarea>
