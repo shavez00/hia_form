@@ -53,30 +53,44 @@ not usually noted with Rugby.
 </h4>
 <table style="width 100%">
   <tr>
+    <td>
      <div>
-				<label><span><td>Headaches &nbsp &nbsp &nbsp</td></span>
-					<td><input type="checkbox" name="symptom[]" value="headaches"></td>
+				<label>
+				  <span>Headaches &nbsp &nbsp &nbsp</span>
+				</label>
 			</div>
+			</td>
+			<td>
+			  <input type="checkbox" name="symptom[]" value="headaches">
+			</td>
   </tr>
   <tr>
-    <div>
+    <td>
+      <div>
 				<label>
-					<td><span>'Pressure in head' &nbsp &nbsp &nbsp</span></td>
-					<td><input type="checkbox" name="symptom[]" value="pressure"></td>
+					<span>'Pressure in head' &nbsp &nbsp &nbsp</span>
 				</label>
-			</div></td>
+			</div>
+	  </td>
+		<td>
+		  <input type="checkbox" name="symptom[]" value="pressure">
+	  </td>
+  </tr>
+  <tr>
+     <td>
+      <div>
+				<label>
+					<span>Neck pain &nbsp &nbsp &nbsp</span>
+				</label>
+		  </div>
+		</td>
+		<td>
+			  <input type="checkbox" name="symptom[]" value="neck pain">
+		</td>
   </tr>
 </table>
 
-			
 			<div>
-				<label>
-					<span>Neck pain &nbsp &nbsp &nbsp<input type="checkbox" name="symptom[]" value="neck pain"></span>
-				</label>
-			</div>
-			<div>
-
-			
 				<label>
 					<span>Message: (required)</span>
 					<textarea placeholder="Include all the details you can" tabindex="5" required></textarea>
