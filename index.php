@@ -30,19 +30,19 @@ that may suggest the development of a delayed concussion. The form is to be comp
 			<div>
 				<label>
 					<span>Time form completed: (required)</span>
-					<input placeholder="Please enter a time" type="text" tabindex="1" required autofocus>
+					<input placeholder="Please enter a time" type="text" tabindex="1" name="time" required autofocus>
 				</label>
 			</div>
 			<div>
 				<label>
 					<span>Physician's Name: (required)</span>
-					<input placeholder="Please enter the physicians name" type="text" tabindex="2" required>
+					<input placeholder="Please enter the physicians name" type="text" name="physician" tabindex="2" required>
 				</label>
 			</div>
 			<div>
 				<label>
 					<span>Player's Name: (required)</span>
-					<input placeholder="Please enter the players name" type="text" tabindex="3" required>
+					<input placeholder="Please enter the players name" type="text" name="player" tabindex="3" required>
 				</label>
 			</div>
 			</br><h4>To the player: From the kick-off time until now:</h4>
@@ -52,10 +52,6 @@ since the injury or following the Game which is
 not usually noted with Rugby.
 </h4>
 <table style="width 100%">
-   <tr>
-      <th>How many</br>
-     Identify any symptom you have experienced since the injury or following the Game which is not usually noted with Rugby.</th>
-  </tr>
   <tr>
     <td>
      <div>
@@ -321,15 +317,8 @@ not usually noted with Rugby.
 		</td>
   </tr>
 </table>
-
 			<div>
-				<label>
-					<span>Message: (required)</span>
-					<textarea placeholder="Include all the details you can" tabindex="5" required></textarea>
-				</label>
-			</div>
-			<div>
-				<button name="submit" type="submit" id="contact-submit">Send Email</button>
+				<button name="submit" type="submit" id="contact-submit">Next</button>
 			</div>
 		</form>
 		<!-- /Form -->
