@@ -4,21 +4,29 @@ require('core.php');
 $vars = array_merge($_GET, $_POST);
 
 $responses = array();
+$responses['symptoms'] = array();
 
 foreach ($vars as $k => $v) {
-    $x = validator::testInput($v);
+	  if (is_array($v)) {
+		    foreach ($v as $symptom) {
+			       $z = validator::testInput($symptom);
+			       //array_shift($v);
+			       array_push($responses['symptoms'], $z);
+		    }
+		} else {
+		 $x = validator::testInput($v);
     $responses[$k] = $x;
+		}
 }
 
 session_start();
 
-$_SESSION["how_much"] = $responses;
-//$_SESSION['symptoms'] = $vars['symptom'];
+$_SESSION["how_many"] = $responses;
 
-print "<pre>";
+/**print "<pre>";
  print_r($_SESSION);
- print "</pre>";
-?><!---
+ print "</pre>";*/
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,7 +42,7 @@ print "<pre>";
 	<div class="wrapper">
 		<div id="main" style="padding:50px 0 0 0;">
 		
-		<!-- Form --
+		<!-- Form -->
 		<form id="contact-form" action="response.php" method="get">
 			<h3>HIA 3</h3>
 			<h4>This form should be completed for every case of suspected and confirmed concussion and for any player developing symptoms or signs after the game
@@ -63,16 +71,16 @@ EOT;
 			<td>
 			  <fieldset> 
 			    <p> 
-			      <select id = "myList"> 
 EOT;
-echo '<option value = "' . $symptom . '-1">1-Mild</option> 
-			          <option value = "' . $symptom . '-2">2-Mild</option> 
-			          <option value = "' . $symptom . '-3">3-Medium</option> 
-			          <option value = "' . $symptom . '-4">4-Medium</option> 
-			          <option value = "' . $symptom . '-5">5-Severe</option> 
-			          <option value = "' . $symptom . '-6">6-Severe</option> ';
+	echo '<select id = "severity" name="' . $symptom . '-severity"> 
+                <option value = "1">1-Mild</option> 
+			          <option value = "2">2-Mild</option> 
+			          <option value = "3">3-Medium</option> 
+			          <option value = "4">4-Medium</option> 
+			          <option value = "5">5-Severe</option> 
+			          <option value = "6">6-Severe</option>
+			      </select> ';
 echo <<<EOT
-			      </select> 
 			    </p> 
 			  </fieldset>
 			</td>

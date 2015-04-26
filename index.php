@@ -14,7 +14,7 @@
 		<div id="main" style="padding:50px 0 0 0;">
 		
 		<!-- Form -->
-		<form id="contact-form" action="response.php" method="get">
+		<form id="contact-form" action="how_much.php" method="get">
 			<h3>HIA 3</h3>
 			<h4>This form should be completed for every case of suspected and confirmed concussion and for any player developing symptoms or signs after the game
 that may suggest the development of a delayed concussion. The form is to be completed after two nights’ sleep – including the night of the game.
@@ -317,7 +317,7 @@ not usually noted with Rugby.
   </tr>
 </table>
 			<div>
-				<button name="submit" type="submit" id="contact-submit">Next</button>
+				<button type="submit" id="contact-submit">Next</button>
 			</div>
 		</form>
 		<!-- /Form -->
