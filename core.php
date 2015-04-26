@@ -11,25 +11,10 @@
 *
 *  Modified this from the original autoloader to be core.php and exist in the Framework namespace
 */
-set_include_path( get_include_path().":/mnt/sdcard/Android/data/me.sheimi.sgit/files/repo/recipe/"); //Need to set include path to include current directory
-set_include_path( get_include_path().":/mnt/sdcard/Android/data/me.sheimi.sgit/files/repo/recipe/class/"); //Need to set include path to include class directory
-set_include_path( get_include_path().":/mnt/sdcard/Android/data/me.sheimi.sgit/files/repo/recipe/interfaces/"); //Need to set include path to include interface directory
+set_include_path( get_include_path().":/mnt/sdcard/Android/data/me.sheimi.sgit/files/repo/hia_form/class"); //Need to set include path to include class directory
 
-define( "DB_DSN", "mysql:host=localhost;dbname=recipe" ); //this constant will be use as our connectionstring/dsn
-
-define( "DB_USERNAME", "shavez00" ); //username of the database
-define( "DB_PASSWORD", "morgan08" ); //password of the database
-define('SQL_HOST',     'localhost');
-define('SQL_USER',     'recipe');
-define('SQL_PASSWD',   'JAMw9pqBpVyUh9Mb');
-define('SQL_DATABASE', 'recipe');
-define('SQL_PREFIX',   'phpc_');
-define('SQL_TYPE',     'mysqli');
 
 define ("PATH_SEPERATOR", ":");  //Need to define PATH_SEPERATOR to eliminate notice message about constant not being defined.
-
-$phpc_prefix = "phpc_" . SQL_PREFIX . SQL_DATABASE;
-        
 
 function autoload($class) 
 {

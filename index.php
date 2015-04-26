@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-45 minutes
 <html>
 <head>
 	<meta charset="UTF-8">
