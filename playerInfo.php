@@ -176,274 +176,86 @@ that may suggest the development of a delayed concussion. The form is to be comp
         </select>
 				</label>
 			</div>
+			</br><h3>Additional tool:  </h3><h4>Identify (below) the supportive tool used at this 36-48 hour follow up:</h4>
 <table style="width 100%">
   <tr>
     <td>
      <div>
 				<label>
-				  <span>Headaches</span>
+				  <span>None</span>
 				</label>
 			</div>
 			</td>
 			<td>
-			  <input type="checkbox" name="symptom[]" value="headaches">
+			  <input type="checkbox" name="additionalTool[]" value="none">
 			</td>
   </tr>
   <tr>
     <td>
       <div>
 				<label>
-					<span>'Pressure in head'</span>
+					<span>SCAT3</span>
 				</label>
 			</div>
 	  </td>
 		<td>
-		  <input type="checkbox" name="symptom[]" value="pressure">
+		  <input type="checkbox" name="additionalTool[]" value="scat3">
 	  </td>
   </tr>
   <tr>
      <td>
       <div>
 				<label>
-					<span>Neck pain</span>
+					<span>Cog Sport</span>
 				</label>
 		  </div>
 		</td>
 		<td>
-			  <input type="checkbox" name="symptom[]" value="neck pain">
+			  <input type="checkbox" name="additionTool[]" value="Cog Sport">
 		</td>
   </tr>
     <tr>
      <td>
       <div>
 				<label>
-					<span>Nausea or vomiting</span>
+					<span>Headminder</span>
 				</label>
 		  </div>
 		</td>
 		<td>
-			  <input type="checkbox" name="symptom[]" value="nausea">
+			  <input type="checkbox" name="additionalTool[]" value="Headminder">
 		</td>
   </tr>
     <tr>
      <td>
       <div>
 				<label>
-					<span>Dizziness</span>
+					<span>Impact</span>
 				</label>
 		  </div>
 		</td>
 		<td>
-			  <input type="checkbox" name="symptom[]" value="dizziness">
+			  <input type="checkbox" name="additionalTool[]" value="Impact">
 		</td>
   </tr>
     <tr>
      <td>
       <div>
 				<label>
-					<span>Blurred vision</span>
+					<span>Other</span>
 				</label>
 		  </div>
-		</td>
-		<td>
-			  <input type="checkbox" name="symptom[]" value="blurred vision">
-		</td>
-  </tr>
-    <tr>
-     <td>
-      <div>
-				<label>
-					<span>Balance problems</span>
-				</label>
-		  </div>
-		</td>
-		<td>
-			  <input type="checkbox" name="symptom[]" value="balance problems">
-		</td>
-  </tr>
-    <tr>
-     <td>
-      <div>
-				<label>
-					<span>Sensitivity to light</span>
-				</label>
-		  </div>
-		</td>
-		<td>
-			  <input type="checkbox" name="symptom[]" value="sensitivity to light">
-		</td>
-  </tr>
-    <tr>
-     <td>
-      <div>
-				<label>
-					<span>Feeling slowed down</span>
-				</label>
-		  </div>
-		</td>
-		<td>
-			  <input type="checkbox" name="symptom[]" value="feeling slowed down">
-		</td>
-  </tr>
-    <tr>
-     <td>
-      <div>
-				<label>
-					<span>Sensitivity to noise</span>
-				</label>
-		  </div>
-		</td>
-		<td>
-			  <input type="checkbox" name="symptom[]" value="sensitivity to noise">
-		</td>
-  </tr>
-    <tr>
-     <td>
-      <div>
-				<label>
-					<span>Feeling like "in a fog"</span>
-				</label>
-		  </div>
-		</td>
-		<td>
-			  <input type="checkbox" name="symptom[]" value="feeling like in a fog">
-		</td>
-  </tr>
-    <tr>
-     <td>
-      <div>
-				<label>
-					<span>"Don't feel right"</span>
-				</label>
-		  </div>
-		</td>
-		<td>
-			  <input type="checkbox" name="symptom[]" value="don't feel right">
-		</td>
-  </tr>
-    <tr>
-     <td>
-      <div>
-				<label>
-					<span>Difficulty concentrating</span>
-				</label>
-		  </div>
-		</td>
-		<td>
-			  <input type="checkbox" name="symptom[]" value="difficulty concentrating">
-		</td>
-  </tr>
-    <tr>
-     <td>
-      <div>
-				<label>
-					<span>Difficulty remembering</span>
-				</label>
-		  </div>
-		</td>
-		<td>
-			  <input type="checkbox" name="symptom[]" value="difficulty remembering">
-		</td>
-  </tr>
-    <tr>
-     <td>
-      <div>
-				<label>
-					<span>Fatigue or low energy</span>
-				</label>
-		  </div>
-		</td>
-		<td>
-			  <input type="checkbox" name="symptom[]" value="fatigue">
-		</td>
-  </tr>
-    <tr>
-     <td>
-      <div>
-				<label>
-					<span>Confusion</span>
-				</label>
-		  </div>
-		</td>
-		<td>
-			  <input type="checkbox" name="symptom[]" value="confusion">
-		</td>
-  </tr>
-    <tr>
-     <td>
-      <div>
-				<label>
-					<span>Drowsiness</span>
-				</label>
-		  </div>
-		</td>
-		<td>
-			  <input type="checkbox" name="symptom[]" value="drowsiness">
-		</td>
-  </tr>
-    <tr>
-     <td>
-      <div>
-				<label>
-					<span>Trouble falling asleep/disturbed sleep</span>
-				</label>
-		  </div>
-		</td>
-		<td>
-			  <input type="checkbox" name="symptom[]" value="trouble falling asleep">
-		</td>
-  </tr>
-    <tr>
-     <td>
-      <div>
-				<label>
-					<span>More emotional</span>
-				</label>
-		  </div>
-		</td>
-		<td>
-			  <input type="checkbox" name="symptom[]" value="more emotional">
-		</td>
-  </tr>
-    <tr>
-     <td>
-      <div>
-				<label>
-					<span>Irritability</span>
-				</label>
-		  </div>
-		</td>
-		<td>
-			  <input type="checkbox" name="symptom[]" value="irritability">
-		</td>
-  </tr>
-    <tr>
-     <td>
-      <div>
-				<label>
-					<span>Sadness</span>
-				</label>
-		  </div>
-		</td>
-		<td>
-			  <input type="checkbox" name="symptom[]" value="sadness">
-		</td>
-  </tr>
-    <tr>
-     <td>
-      <div>
-				<label>
-					<span>Nervous or anxious</span>
-				</label>
-		  </div>
-		</td>
-		<td>
-			  <input type="checkbox" name="symptom[]" value="nervousness">
 		</td>
   </tr>
 </table>
-			<div>
-				<button type="submit" id="contact-submit">Next</button>
+		<div>
+				<label>
+					<span>Was a HIA 1 form completed for this event? (required)</span>
+					<select id = "severity" name="HIA1"> 
+	              <option value = "No">No</option> 
+                <option value = "Yes">Yes</option>
+        </select>
+				</label>
 			</div>
 		</form>
 		<!-- /Form -->

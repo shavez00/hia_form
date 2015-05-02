@@ -4,19 +4,28 @@ require('core.php');
 $vars = array_merge($_GET, $_POST);
 
 $responses = array();
+$responses['additionalTool'] = array();
 
 $rand = validator::random_bytes(2);
 
 foreach ($vars as $k => $v) {
-    $x = validator::testInput($v);
+	  if (is_array($v)) {
+		    foreach ($v as $symptom) {
+			       $z = validator::testInput($symptom);
+			       //array_shift($v);
+			       array_push($responses['additionalTool'], $z);
+		    }
+		} else {
+		 $x = validator::testInput($v);
     $responses[$k] = $x;
+		}
 }
 
 $responses['sessionID'] = $rand;
 
 session_start();
 
-//$_SESSION["playerInfo"] = $responses;
+$_SESSION["playerInfo"] = $responses;
 //$_SESSION['symptoms'] = $vars['symptom'];
 
 print "<pre>";
@@ -52,6 +61,7 @@ that may suggest the development of a delayed concussion. The form is to be comp
 symptom that is still present from 1 to 6.</h4>
 <table style="width 100%">
 <?php
+/**
 foreach($_SESSION['symptoms']['symptoms'] as $symptom) {
     echo <<<EOT
   <tr>
@@ -85,14 +95,14 @@ echo <<<EOT
 			</td>
   </tr>
 EOT;
-}
-?>
+}*/
+?><!----
 </table>
 			<div>
 				<button type="submit" id="contact-submit">Next</button>
 			</div>
 		</form>
-		<!-- /Form -->
+		<!-- /Form
 		
 		</div>
 	</div>
