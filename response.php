@@ -5,19 +5,25 @@ $vars = array_merge($_GET, $_POST);
 
 $responses = array();
 
+$rand = validator::random_bytes(2);
+
 foreach ($vars as $k => $v) {
     $x = validator::testInput($v);
     $responses[$k] = $x;
 }
 
+$responses['sessionID'] = $rand;
+
 session_start();
 
-$_SESSION["how_much"] = $responses;
+//$_SESSION["playerInfo"] = $responses;
 //$_SESSION['symptoms'] = $vars['symptom'];
 
 print "<pre>";
  print_r($_SESSION);
  print "</pre>";
+
+//session_unset();
 ?><!---
 <!DOCTYPE html>
 <html>
@@ -35,18 +41,18 @@ print "<pre>";
 		<div id="main" style="padding:50px 0 0 0;">
 		
 		<!-- Form --
-		<form id="contact-form" action="response.php" method="get">
+		<form id="contact-form" action="how_long.php" method="get">
 			<h3>HIA 3</h3>
 			<h4>This form should be completed for every case of suspected and confirmed concussion and for any player developing symptoms or signs after the game
 that may suggest the development of a delayed concussion. The form is to be completed after two nights’ sleep – including the night of the game.
 </h4>
 			</br><h4>To the player: From the kick-off time until now:</h4>
-			<h3>HOW MUCH</h3>
-			<h4>Identify the maximum intensity of
-each symptom.</br>1-2 Mild, 3-4 Medium, 5-6 Severe</h4>
+			<h3>STILL PRESENT</h3>
+			<h4>Confirm the intensity of any unusual
+symptom that is still present from 1 to 6.</h4>
 <table style="width 100%">
 <?php
-foreach($vars['symptom'] as $symptom) {
+foreach($_SESSION['symptoms']['symptoms'] as $symptom) {
     echo <<<EOT
   <tr>
     <td>
@@ -62,17 +68,18 @@ EOT;
 			</td>
 			<td>
 			  <fieldset> 
-			    <p> 
-			      <select id = "myList"> 
+			  <p>
 EOT;
-echo '<option value = "' . $symptom . '-1">1-Mild</option> 
-			          <option value = "' . $symptom . '-2">2-Mild</option> 
-			          <option value = "' . $symptom . '-3">3-Medium</option> 
-			          <option value = "' . $symptom . '-4">4-Medium</option> 
-			          <option value = "' . $symptom . '-5">5-Severe</option> 
-			          <option value = "' . $symptom . '-6">6-Severe</option> ';
+	echo '<select id = "severity" name="' . $symptom . '-severity"> 
+	              <option value = "0">0-No</option> 
+                <option value = "1">1-Mild</option> 
+			          <option value = "2">2-Mild</option> 
+			          <option value = "3">3-Medium</option> 
+			          <option value = "4">4-Medium</option> 
+			          <option value = "5">5-Severe</option> 
+			          <option value = "6">6-Severe</option>
+			      </select> ';
 echo <<<EOT
-			      </select> 
 			    </p> 
 			  </fieldset>
 			</td>

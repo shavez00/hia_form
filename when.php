@@ -3,36 +3,29 @@ require('core.php');
 
 $vars = array_merge($_GET, $_POST);
 
-if ($vars == NULL) header("Location:index.php");
-
 $responses = array();
-$responses['symptoms'] = array();
-$rand = validator::random_bytes(2);
 
 foreach ($vars as $k => $v) {
-	  if (is_array($v)) {
-		    foreach ($v as $symptom) {
-			       $z = validator::testInput($symptom);
-			       //array_shift($v);
-			       array_push($responses['symptoms'], $z);
-		    }
-		} else {
-		 $x = validator::testInput($v);
+    $x = validator::testInput($v);
     $responses[$k] = $x;
-		}
 }
-
-$responses['sessionID'] = $rand;
 
 session_start();
 
-session_unset();
+if ($vars == NULL AND $_SESSION['symptoms']['sessionID'] === NULL) header("Location:index.php");
 
-$_SESSION["symptoms"] = $responses;
+if ($vars == NULL AND isset($_SESSION['symptoms']['sessionID'])) header("Location:how_much.php");
+
+$responses['sessionID'] = $_SESSION['symptoms']['sessionID'];
+
+$_SESSION["how_much"] = $responses;
+//$_SESSION['symptoms'] = $vars['symptom'];
 
 /**print "<pre>";
  print_r($_SESSION);
  print "</pre>";*/
+
+//session_unset();
 ?>
 <!DOCTYPE html>
 <html>
@@ -50,18 +43,19 @@ $_SESSION["symptoms"] = $responses;
 		<div id="main" style="padding:50px 0 0 0;">
 		
 		<!-- Form -->
-		<form id="contact-form" action="when.php" method="get">
+		<form id="contact-form" action="how_long.php" method="get">
 			<h3>HIA 3</h3>
 			<h4>This form should be completed for every case of suspected and confirmed concussion and for any player developing symptoms or signs after the game
 that may suggest the development of a delayed concussion. The form is to be completed after two nights’ sleep – including the night of the game.
 </h4>
 			</br><h4>To the player: From the kick-off time until now:</h4>
-			<h3>HOW MUCH</h3>
-			<h4>Identify the maximum intensity of
-each symptom.</br>1-2 Mild, 3-4 Medium, 5-6 Severe</h4>
+			<h3>WHEN</h3>
+			<h4>Identify when you
+started to feel each
+symptom identified.</h4>
 <table style="width 100%">
 <?php
-foreach($vars['symptom'] as $symptom) {
+foreach($_SESSION['symptoms']['symptoms'] as $symptom) {
     echo <<<EOT
   <tr>
     <td>
@@ -77,15 +71,13 @@ EOT;
 			</td>
 			<td>
 			  <fieldset> 
-			    <p> 
+			  <p>
 EOT;
-	echo '<select id = "severity" name="' . $symptom . '-severity"> 
-                <option value = "1">1-Mild</option> 
-			          <option value = "2">2-Mild</option> 
-			          <option value = "3">3-Medium</option> 
-			          <option value = "4">4-Medium</option> 
-			          <option value = "5">5-Severe</option> 
-			          <option value = "6">6-Severe</option>
+	echo '<select id = "severity" name="' . $symptom . '-how_long"> 
+                <option value = "During match, immediately">During match, immediately</option> 
+			          <option value = "During match, later">During match, later</option> 
+			          <option value = "Post match, same day">Post match, same day</option> 
+			          <option value = "Post match, days later">Post match, days later</option> 
 			      </select> ';
 echo <<<EOT
 			    </p> 

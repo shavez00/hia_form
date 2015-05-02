@@ -1,7 +1,27 @@
 <?php
+require('core.php');
+
+$vars = array_merge($_GET, $_POST);
+
+$responses = array();
+
+foreach ($vars as $k => $v) {
+    $x = validator::testInput($v);
+    $responses[$k] = $x;
+}
 
 session_start();
-session_unset();
+
+$responses['sessionID'] = $_SESSION['symptoms']['sessionID'];
+
+$_SESSION["present"] = $responses;
+//$_SESSION['symptoms'] = $vars['symptom'];
+
+/**print "<pre>";
+ print_r($_SESSION);
+ print "</pre>";*/
+
+//session_unset();
 ?>
 <!DOCTYPE html>
 <html>
@@ -19,42 +39,143 @@ session_unset();
 		<div id="main" style="padding:50px 0 0 0;">
 		
 		<!-- Form -->
-		<form id="contact-form" action="how_much.php" method="get">
+		<form id="contact-form" action="response.php" method="get">
 			<h3>HIA 3</h3>
 			<h4>This form should be completed for every case of suspected and confirmed concussion and for any player developing symptoms or signs after the game
 that may suggest the development of a delayed concussion. The form is to be completed after two nights’ sleep – including the night of the game.
 </h4>
 			<div>
-			  <label>
-			     <span>
-			        Today's date: <?php echo date("m/d/Y");?>
-			     </span>
-			  </label>
-			</div>
-			<div>
 				<label>
-					<span>Time form completed: (required)</span>
-					<input placeholder="Please enter a time" type="text" tabindex="1" name="time" required autofocus>
+					<span>Player's Name: <?php echo $_SESSION['symptoms']['player']; ?></span>
+					</br>
 				</label>
 			</div>
 			<div>
 				<label>
-					<span>Physician's Name: (required)</span>
-					<input placeholder="Please enter the physicians name" type="text" name="physician" tabindex="2" required>
+					<span>Competition: (required)</span>
+					<input placeholder="Team A versus Team B" type="text" name="competition" tabindex="2" required>
 				</label>
 			</div>
 			<div>
 				<label>
-					<span>Player's Name: (required)</span>
-					<input placeholder="Please enter the players name" type="text" name="player" tabindex="3" required>
+					<span>Date of match: (required)</span>
+					<input placeholder="Please enter a time" type="date" tabindex="1" name="match" required autofocus>
 				</label>
 			</div>
-			</br><h4>To the player: From the kick-off time until now:</h4>
-			<h3>HOW MANY</h3>
-			<h4>Identify any symptom you have experienced
-since the injury or following the Game which is
-not usually noted with Rugby.
-</h4>
+			<div>
+				<label>
+					<span>Kickoff time: (required)</span>
+					<input placeholder="Please enter a time" type="text" tabindex="1" name="kickoff" required autofocus>
+				</label>
+			</div>
+			<div>
+				<label>
+					<span>Team: (required)</span>
+					<input placeholder="Please enter the players team name" type="text" name="team" tabindex="2" required>
+				</label>
+			</div>
+			<div>
+				<label>
+					<span>Age: (required)</span>
+					<input placeholder="Please enter the players age" type="number" name="age" tabindex="2" required>
+				</label>
+			</div>
+			<div>
+				<label>
+					<span>Height: (required)</span>
+					<input placeholder="Please enter the players height" type="text" name="height" tabindex="2" required>
+				</label>
+			</div>
+			<div>
+				<label>
+					<span>Weight: (required)</span>
+					<input placeholder="Please enter the players weight" type="number" name="weight" tabindex="2" required>
+				</label>
+			</div>
+			<div>
+				<label>
+					<span>Was a HIA 1 form completed for this event? (required)</span>
+					<select id = "severity" name="HIA1"> 
+	              <option value = "No">No</option> 
+                <option value = "Yes">Yes</option>
+        </select>
+				</label>
+			</div>
+			<div>
+				<label>
+					<span>Was a HIA 2 form completed for this event? (required)</span>
+					<select id = "severity" name="HIA2"> 
+	              <option value = "No">No</option> 
+                <option value = "Yes">Yes</option>
+        </select>
+				</label>
+			</div>
+			<div>
+				<label>
+					<span>Has this player been previously diagnosed with a concussion? (required)</span>
+					<select id = "severity" name="previous_concusion"> 
+	              <option value = "No">No</option> 
+                <option value = "Yes">Yes</option>
+                <option value = "DK">Don't know</option>
+        </select>
+				</label>
+			</div>
+			<div>
+				<label>
+					<span>If yes, how many?</span>
+					<input placeholder="Please enter how many" type="number" name="number_concusions" tabindex="2">
+				</label>
+			</div>
+			<div>
+				<label>
+					<span>Year player began playing Rugby?</span>
+					<input placeholder="Please enter year" type="number" name="begin" tabindex="2">
+				</label>
+			</div>
+			<div>
+				<label>
+					<span>Year player began playing professional Rugby?</span>
+					<input placeholder="Please enter year" type="number" name="prof" tabindex="2">
+				</label>
+			</div>
+			</br><h3>Injury mechanism: </h3><h4>A selection MUST be made for each of the four areas, that is ‘Game event’, ‘Collision’, ‘Contact’ and ‘Player technique’:</h4>
+			<div>
+				<label>
+					<span>Game event: (required)</span>
+					<select id = "severity" name="event"> 
+	              <option value = "Tackling">Tackling</option> 
+                <option value = "Being Tackeled">Being Tackled</option>
+                <option value = "Ruck">Ruck or Maul</option>
+                <option value = "Scrum">Scrum</option>
+                <option value = "Unknown">Unknown</option>
+        </select>
+				</label>
+			</div>
+			<div>
+				<label>
+					<span>Collision: (required)</span>
+					<select id = "severity" name="collision"> 
+	              <option value = "Head/Head">Head/Head</option> 
+                <option value = "Head/Shoulder">Head/Shoulder</option>
+                <option value = "Head/Upper Limb">Head/Upper Limb</option>
+                <option value = "Head/knee or hip">Head/knee or hip</option>
+                <option value = "Head/foot">Head/foot</option>
+                <option value = "Head/ground">Head/ground</option>
+                <option value = "Unknown">Unknown</option>
+        </select>
+				</label>
+			</div>
+			<div>
+				<label>
+					<span>Player technique: (required)</span>
+					<select id = "severity" name="technique"> 
+	              <option value = "Correct technique">Correct technique</option> 
+                <option value = "Head incorrect position">Head incorrect position</option>
+                <option value = "Other incorrect technique">Other incorrect technique</option>
+                <option value = "Unknown">Unknown</option>
+        </select>
+				</label>
+			</div>
 <table style="width 100%">
   <tr>
     <td>
