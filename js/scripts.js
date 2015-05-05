@@ -1,6 +1,7 @@
 /*
 Creating an HTML5 enhanced responsive-ready contact form, with custom javascript feature detection
-www.toddmotto.com
+adapted from www.toddmotto.com
+Author: http://www.vezcore.com
 */
 (function() {
 

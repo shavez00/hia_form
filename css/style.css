@@ -1,7 +1,8 @@
 /*
 Title: Creating an HTML5 enhanced responsive-ready contact form, with custom javascript feature detection
 Tutorial on: http://www.onextrapixel.com
-Author: http://www.toddmotto.com
+Adapted from: http://www.toddmotto.com
+Author: http://www.vezcore.com
 */
 
 * {
@@ -135,4 +136,7 @@ th {
 }
 :-ms-input-placeholder {
     color:#888;
+}
+#concusconf {
+    width: 100%;
 }

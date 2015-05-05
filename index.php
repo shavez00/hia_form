@@ -9,7 +9,7 @@ session_unset();
 	<meta charset="UTF-8">
 	<title>Head Injury Assessment Tool</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<meta name="author" content="@toddmotto">
+	<meta name="author" content="@shavez00">
 	<link href="css/style.css" rel="stylesheet">
 </head>
 

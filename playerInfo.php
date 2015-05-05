@@ -29,7 +29,7 @@ $_SESSION["present"] = $responses;
 	<meta charset="UTF-8">
 	<title>Head Injury Assessment Tool</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<meta name="author" content="@toddmotto">
+	<meta name="author" content="@shavez00">
 	<link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -177,7 +177,7 @@ that may suggest the development of a delayed concussion. The form is to be comp
 				</label>
 			</div>
 			</br><h3>Additional tool:  </h3><h4>Identify (below) the supportive tool used at this 36-48 hour follow up:</h4>
-<table style="width 100%">
+<table id="concusconf" style="width 100%">
   <tr>
     <td>
      <div>
@@ -246,16 +246,34 @@ that may suggest the development of a delayed concussion. The form is to be comp
 				</label>
 		  </div>
 		</td>
+		<td>
+			  <input type="checkbox" name="additionalTool[]" value="Other">
+		</td>
   </tr>
 </table>
-		<div>
+    <div>
 				<label>
-					<span>Was a HIA 1 form completed for this event? (required)</span>
-					<select id = "severity" name="HIA1"> 
+					<span>Was the result abnormal?</span>
+					<select id = "severity" name="result"> 
 	              <option value = "No">No</option> 
                 <option value = "Yes">Yes</option>
         </select>
 				</label>
+	 </div>
+	</br>
+	<h3>Diagnostic summary:</h3>
+  <div>
+				<label>
+					<select id = "concusconf" name="concusion_confirmed"> 
+	              <option value = "No residual">Concussion confirmed on game day with no residual signs or symptoms at time of completion of HIA 3</option> 
+                <option value = "With signs">Concussion confirmed with signs and/or symptom(s) still present(s) at time of completion of HIA 3</option>
+                <option value = "Excluded">Concussion excluded (no sign or symptom of concussion since the injury)</option>
+        </select>
+				</label>
+			</div>
+			</br>
+			<div>
+				<button type="submit" id="contact-submit">Next</button>
 			</div>
 		</form>
 		<!-- /Form -->

@@ -28,19 +28,19 @@ session_start();
 $_SESSION["playerInfo"] = $responses;
 //$_SESSION['symptoms'] = $vars['symptom'];
 
-print "<pre>";
+/**print "<pre>";
  print_r($_SESSION);
- print "</pre>";
+ print "</pre>";*/
 
 //session_unset();
-?><!---
+?>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
 	<title>Head Injury Assessment Tool</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<meta name="author" content="@toddmotto">
+	<meta name="author" content="@shavez00">
 	<link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -48,62 +48,181 @@ print "<pre>";
 	
 	<div class="wrapper">
 		<div id="main" style="padding:50px 0 0 0;">
-		
-		<!-- Form --
-		<form id="contact-form" action="how_long.php" method="get">
+		  <div id="contact-form">
 			<h3>HIA 3</h3>
-			<h4>This form should be completed for every case of suspected and confirmed concussion and for any player developing symptoms or signs after the game
-that may suggest the development of a delayed concussion. The form is to be completed after two nights’ sleep – including the night of the game.
-</h4>
-			</br><h4>To the player: From the kick-off time until now:</h4>
-			<h3>STILL PRESENT</h3>
-			<h4>Confirm the intensity of any unusual
-symptom that is still present from 1 to 6.</h4>
-<table style="width 100%">
-<?php
-/**
-foreach($_SESSION['symptoms']['symptoms'] as $symptom) {
-    echo <<<EOT
-  <tr>
-    <td>
+			<table id="concusconf" style="width 100%">
+			  <tr>
+			    <td>
+			      <div>
+			        <lable>
+			          <span>Today's date:</span>
+			        </lable>
+			      </div>
+			    </td>
+			    <td>
+			      <?php
+echo <<<EOT
      <div>
 				<label>
 				  <span>
 EOT;
-				echo $symptom;
-				echo <<<EOT
-				  </span>
+echo date("m/d/Y");
+echo <<<EOT
+          </span>
+				</label>
+			</div>
+EOT;
+?>
+			    </td>
+			    <td>
+			      <div>
+			        <lable>
+			          <span>Time form completed:</span>
+			        </lable>
+			      </div>
+			    </td>
+			    <td>
+			      <?php
+echo <<<EOT
+     <div>
+				<label>
+				  <span>
+EOT;
+echo $_SESSION['symptoms']['time'];
+echo <<<EOT
+          </span>
+				</label>
+			</div>
+EOT;
+?>
+			    </td>
+			    <td>
+			      <div>
+			        <lable>
+			          <span>Physicians name:</span>
+			        </lable>
+			      </div>
+			    </td>
+			    <td>
+			      <?php
+echo <<<EOT
+     <div>
+				<label>
+				  <span>
+EOT;
+echo $_SESSION['symptoms']['physician'];
+echo <<<EOT
+          </span>
+				</label>
+			</div>
+EOT;
+?>
+			    </td>
+			  </tr>
+			  <tr>
+			    <td>
+			      <div>
+			        <lable>
+			          <span>Players name:</span>
+			        </lable>
+			      </div>
+			    </td>
+			    </br>
+			    <td>
+			      <?php
+echo <<<EOT
+     <div>
+				<label>
+				  <span>
+EOT;
+echo $_SESSION['symptoms']['player'];
+echo <<<EOT
+          </span>
+				</label>
+			</div>
+EOT;
+?>
+			    </td>
+			  </tr>
+			</table>
+			<table>
+<?php
+foreach($_SESSION['symptoms']['symptoms'] as $symptom) {
+    echo <<<EOT
+   <tr>
+     <td>
+     <div>
+				<label>
+				  <span>
+EOT;
+     echo $symptom;
+     echo <<<EOT
+          </span>
 				</label>
 			</div>
 			</td>
 			<td>
-			  <fieldset> 
-			  <p>
+			  <div>
+			    <lable>
+			      <span>
 EOT;
-	echo '<select id = "severity" name="' . $symptom . '-severity"> 
-	              <option value = "0">0-No</option> 
-                <option value = "1">1-Mild</option> 
-			          <option value = "2">2-Mild</option> 
-			          <option value = "3">3-Medium</option> 
-			          <option value = "4">4-Medium</option> 
-			          <option value = "5">5-Severe</option> 
-			          <option value = "6">6-Severe</option>
-			      </select> ';
-echo <<<EOT
-			    </p> 
-			  </fieldset>
-			</td>
-  </tr>
+               echo current($_SESSION['how_much']);
+               next($_SESSION['how_much']);
+               echo <<< EOT
+             </span>
+           </lable>
+         </div>
+       </td>
+       <td>
+			  <div>
+			    <lable>
+			      <span>
 EOT;
-}*/
-?><!----
-</table>
+               echo current($_SESSION['when']);
+               next($_SESSION['when']);
+               echo <<< EOT
+             </span>
+           </lable>
+         </div>
+       </td>
+       <td>
+			  <div>
+			    <lable>
+			      <span>
+EOT;
+               echo current($_SESSION['how_long']);
+               next($_SESSION['how_long']);
+               echo <<< EOT
+             </span>
+           </lable>
+         </div>
+       </td>
+       <td>
+			  <div>
+			    <lable>
+			      <span>
+EOT;
+               echo current($_SESSION['present']);
+               next($_SESSION['present']);
+               echo <<< EOT
+             </span>
+           </lable>
+         </div>
+       </td>
+			</tr>
+EOT;
+}
+?>
+      </table>
+<?php
+print "<pre>";
+ print_r($_SESSION);
+ print "</pre>";
+?>
 			<div>
 				<button type="submit" id="contact-submit">Next</button>
 			</div>
-		</form>
-		<!-- /Form
-		
+		</div>
 		</div>
 	</div>
 
