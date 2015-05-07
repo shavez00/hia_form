@@ -65,7 +65,7 @@ not usually noted with Rugby.
 			</div>
 			</td>
 			<td>
-			  <input type="checkbox" name="symptom[]" value="headaches">
+			  <input type="checkbox" name="symptom[]" value="Headaches">
 			</td>
   </tr>
   <tr>
@@ -77,7 +77,7 @@ not usually noted with Rugby.
 			</div>
 	  </td>
 		<td>
-		  <input type="checkbox" name="symptom[]" value="pressure">
+		  <input type="checkbox" name="symptom[]" value="Pressure">
 	  </td>
   </tr>
   <tr>
@@ -89,7 +89,7 @@ not usually noted with Rugby.
 		  </div>
 		</td>
 		<td>
-			  <input type="checkbox" name="symptom[]" value="neck pain">
+			  <input type="checkbox" name="symptom[]" value="Neck pain">
 		</td>
   </tr>
     <tr>
@@ -101,7 +101,7 @@ not usually noted with Rugby.
 		  </div>
 		</td>
 		<td>
-			  <input type="checkbox" name="symptom[]" value="nausea">
+			  <input type="checkbox" name="symptom[]" value="Nausea">
 		</td>
   </tr>
     <tr>
@@ -113,7 +113,7 @@ not usually noted with Rugby.
 		  </div>
 		</td>
 		<td>
-			  <input type="checkbox" name="symptom[]" value="dizziness">
+			  <input type="checkbox" name="symptom[]" value="Dizziness">
 		</td>
   </tr>
     <tr>
@@ -125,7 +125,7 @@ not usually noted with Rugby.
 		  </div>
 		</td>
 		<td>
-			  <input type="checkbox" name="symptom[]" value="blurred vision">
+			  <input type="checkbox" name="symptom[]" value="Blurred vision">
 		</td>
   </tr>
     <tr>
@@ -137,7 +137,7 @@ not usually noted with Rugby.
 		  </div>
 		</td>
 		<td>
-			  <input type="checkbox" name="symptom[]" value="balance problems">
+			  <input type="checkbox" name="symptom[]" value="Balance problems">
 		</td>
   </tr>
     <tr>
@@ -149,7 +149,7 @@ not usually noted with Rugby.
 		  </div>
 		</td>
 		<td>
-			  <input type="checkbox" name="symptom[]" value="sensitivity to light">
+			  <input type="checkbox" name="symptom[]" value="Sensitivity to light">
 		</td>
   </tr>
     <tr>
@@ -161,7 +161,7 @@ not usually noted with Rugby.
 		  </div>
 		</td>
 		<td>
-			  <input type="checkbox" name="symptom[]" value="feeling slowed down">
+			  <input type="checkbox" name="symptom[]" value="Feeling slowed down">
 		</td>
   </tr>
     <tr>
@@ -173,7 +173,7 @@ not usually noted with Rugby.
 		  </div>
 		</td>
 		<td>
-			  <input type="checkbox" name="symptom[]" value="sensitivity to noise">
+			  <input type="checkbox" name="symptom[]" value="Sensitivity to noise">
 		</td>
   </tr>
     <tr>
@@ -185,7 +185,7 @@ not usually noted with Rugby.
 		  </div>
 		</td>
 		<td>
-			  <input type="checkbox" name="symptom[]" value="feeling like in a fog">
+			  <input type="checkbox" name="symptom[]" value="Feeling like in a fog">
 		</td>
   </tr>
     <tr>
@@ -197,7 +197,7 @@ not usually noted with Rugby.
 		  </div>
 		</td>
 		<td>
-			  <input type="checkbox" name="symptom[]" value="don't feel right">
+			  <input type="checkbox" name="symptom[]" value="Don't feel right">
 		</td>
   </tr>
     <tr>
@@ -209,7 +209,7 @@ not usually noted with Rugby.
 		  </div>
 		</td>
 		<td>
-			  <input type="checkbox" name="symptom[]" value="difficulty concentrating">
+			  <input type="checkbox" name="symptom[]" value="Difficulty concentrating">
 		</td>
   </tr>
     <tr>
@@ -221,7 +221,7 @@ not usually noted with Rugby.
 		  </div>
 		</td>
 		<td>
-			  <input type="checkbox" name="symptom[]" value="difficulty remembering">
+			  <input type="checkbox" name="symptom[]" value="Difficulty remembering">
 		</td>
   </tr>
     <tr>
@@ -233,7 +233,7 @@ not usually noted with Rugby.
 		  </div>
 		</td>
 		<td>
-			  <input type="checkbox" name="symptom[]" value="fatigue">
+			  <input type="checkbox" name="symptom[]" value="Fatigue">
 		</td>
   </tr>
     <tr>
@@ -245,7 +245,7 @@ not usually noted with Rugby.
 		  </div>
 		</td>
 		<td>
-			  <input type="checkbox" name="symptom[]" value="confusion">
+			  <input type="checkbox" name="symptom[]" value="Confusion">
 		</td>
   </tr>
     <tr>
@@ -257,7 +257,7 @@ not usually noted with Rugby.
 		  </div>
 		</td>
 		<td>
-			  <input type="checkbox" name="symptom[]" value="drowsiness">
+			  <input type="checkbox" name="symptom[]" value="Drowsiness">
 		</td>
   </tr>
     <tr>
@@ -269,7 +269,7 @@ not usually noted with Rugby.
 		  </div>
 		</td>
 		<td>
-			  <input type="checkbox" name="symptom[]" value="trouble falling asleep">
+			  <input type="checkbox" name="symptom[]" value="Trouble falling asleep">
 		</td>
   </tr>
     <tr>
@@ -281,7 +281,7 @@ not usually noted with Rugby.
 		  </div>
 		</td>
 		<td>
-			  <input type="checkbox" name="symptom[]" value="more emotional">
+			  <input type="checkbox" name="symptom[]" value="More emotional">
 		</td>
   </tr>
     <tr>
@@ -293,7 +293,7 @@ not usually noted with Rugby.
 		  </div>
 		</td>
 		<td>
-			  <input type="checkbox" name="symptom[]" value="irritability">
+			  <input type="checkbox" name="symptom[]" value="Irritability">
 		</td>
   </tr>
     <tr>
@@ -305,7 +305,7 @@ not usually noted with Rugby.
 		  </div>
 		</td>
 		<td>
-			  <input type="checkbox" name="symptom[]" value="sadness">
+			  <input type="checkbox" name="symptom[]" value="Sadness">
 		</td>
   </tr>
     <tr>
@@ -317,10 +317,30 @@ not usually noted with Rugby.
 		  </div>
 		</td>
 		<td>
-			  <input type="checkbox" name="symptom[]" value="nervousness">
+			  <input type="checkbox" name="symptom[]" value="Nervousness">
 		</td>
   </tr>
 </table>
+<div>
+  <label>
+    <span>ANTEROGRADE AMNESIA (amnesia after the injury)?</span>
+      <select name="Anterograde Amnesia"> 
+	      <option value = "No">No</option> 
+        <option value = "Yes">Yes</option>
+      </select>
+      <input placeholder="If Yes, please input duration" type="text" name="Anterograde Amnesia duration" tabindex="2">
+  </label>
+</div>
+<div>
+  <label>
+    <span>RETROGRADE AMNESIA (amnesia before the injury)?</span>
+      <select name="Retrograde Amnesia"> 
+	      <option value = "No">No</option> 
+        <option value = "Yes">Yes</option>
+      </select>
+      <input placeholder="If Yes, please input duration" type="text" name="Retrograde Amnesia duration" tabindex="2">
+  </label>
+</div>
 			<div>
 				<button type="submit" id="contact-submit">Next</button>
 			</div>

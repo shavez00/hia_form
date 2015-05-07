@@ -39,7 +39,7 @@ $_SESSION["present"] = $responses;
 		<div id="main" style="padding:50px 0 0 0;">
 		
 		<!-- Form -->
-		<form id="contact-form" action="response.php" method="get">
+		<form id="contact-form" action="output.php" method="get">
 			<h3>HIA 3</h3>
 			<h4>This form should be completed for every case of suspected and confirmed concussion and for any player developing symptoms or signs after the game
 that may suggest the development of a delayed concussion. The form is to be completed after two nights’ sleep – including the night of the game.

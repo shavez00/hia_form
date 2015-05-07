@@ -140,3 +140,13 @@ th {
 #concusconf {
     width: 100%;
 }
+.parentTable{ 
+     width: 100%; 
+} 
+.parentTable tr th { 
+     border-left: 1px solid #b4b4b4;  
+     border-bottom: 1px solid #b4b4b4; 
+}
+.parentTable tr td { 
+     border-left: 1px solid #b4b4b4; 
+}
