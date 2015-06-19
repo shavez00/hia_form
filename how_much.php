@@ -49,7 +49,7 @@ $_SESSION["symptoms"] = $responses;
 	<div class="wrapper">
 		<div id="main" style="padding:50px 0 0 0;">
 		
-		<!-- Form --
+		<!-- Form -->
 		<form id="contact-form" action="when.php" method="get">
 			<h3>HIA 3</h3>
 			<h4>This form should be completed for every case of suspected and confirmed concussion and for any player developing symptoms or signs after the game
