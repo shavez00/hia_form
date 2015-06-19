@@ -67,6 +67,13 @@ th {
 	margin:5px 0;
 	font-weight:900;
 }
+#contact-form label error {
+	cursor:pointer;
+	color:#ff0000;
+	display:block;
+	margin:5px 0;
+	font-weight:900;
+}
 #contact-form input[type="text"],
 #contact-form input[type="email"],
 #contact-form input[type="tel"],

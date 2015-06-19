@@ -68,7 +68,7 @@ EOT;
 			  <fieldset> 
 			  <p>
 EOT;
-	echo '<select id = "severity" name="' . $symptom . '-severity"> 
+	echo '<select id = "severity" name="' . $symptom . '-current-severity"> 
 	              <option value = "0">0-No</option> 
                 <option value = "1">1-Mild</option> 
 			          <option value = "2">2-Mild</option> 

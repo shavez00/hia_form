@@ -3,8 +3,6 @@ require('core.php');
 
 $vars = array_merge($_GET, $_POST);
 
-if ($vars == NULL) header("Location:index.php");
-
 $responses = array();
 $responses['symptoms'] = array();
 $rand = validator::random_bytes(2);
@@ -13,7 +11,6 @@ foreach ($vars as $k => $v) {
 	  if (is_array($v)) {
 		    foreach ($v as $symptom) {
 			       $z = validator::testInput($symptom);
-			       //array_shift($v);
 			       array_push($responses['symptoms'], $z);
 		    }
 		} else {
@@ -25,6 +22,9 @@ foreach ($vars as $k => $v) {
 $responses['sessionID'] = $rand;
 
 session_start();
+
+if ($vars == NULL) header("Location:index.php");
+if ($_SESSION['symptoms']['sessionID'] != NULL) header("Location:index.php");
 
 session_unset();
 
@@ -49,7 +49,7 @@ $_SESSION["symptoms"] = $responses;
 	<div class="wrapper">
 		<div id="main" style="padding:50px 0 0 0;">
 		
-		<!-- Form -->
+		<!-- Form --
 		<form id="contact-form" action="when.php" method="get">
 			<h3>HIA 3</h3>
 			<h4>This form should be completed for every case of suspected and confirmed concussion and for any player developing symptoms or signs after the game

@@ -3,6 +3,26 @@ require('core.php');
 
 $vars = array_merge($_GET, $_POST);
 
+//error checking to make sure a four digit year is input
+$year = strlen($vars['Year_started_playing']);
+$prof = strlen($vars['Year_started_playing_professionally']);
+$age = strlen($vars['Age']);
+
+if ($year != 4) {
+    header("Location:playerInfo.php");
+    session_start();
+    $_SESSION['error'] = "start";
+} elseif ($prof != 4) {
+    header("Location:playerInfo.php");
+    session_start();
+    $_SESSION['error'] = "prof";
+} elseif ($age != 2) {
+    header("Location:playerInfo.php");
+    session_start();
+    $_SESSION['error'] = "age";
+}
+//end error checking ****************???*
+
 $responses = array();
 $responses['additionalTool'] = array();
 
@@ -46,7 +66,7 @@ $_SESSION["playerInfo"] = $responses;
 <body>
 	<div class="wrapper">
 		<div id="main" style="padding:50px 0 0 0;">
-		  <div id="contact-form">
+		  <form id="contact-form" action="response.php" method="get">
 			<h3>HIA 3</h3>
 			<table style="width: 100%">
 			  <tr>
@@ -253,11 +273,12 @@ foreach ($_SESSION['playerInfo'] as $k => $v) {
 }
 ?>
 			<div>
-				<button type="submit" id="contact-submit">Next</button>
+				<button type="submit" id="contact-submit">Submit and Save</button>
 			</div>
 		</div>
 		</div>
 	</div>
+	</form>
 
 	<script src="js/scripts.js"></script>
 	

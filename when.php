@@ -73,7 +73,7 @@ EOT;
 			  <fieldset> 
 			  <p>
 EOT;
-	echo '<select id = "severity" name="' . $symptom . '-how_long"> 
+	echo '<select id = "severity" name="' . $symptom . '-when"> 
                 <option value = "During match, immediately">During match, immediately</option> 
 			          <option value = "During match, later">During match, later</option> 
 			          <option value = "Post match, same day">Post match, same day</option> 

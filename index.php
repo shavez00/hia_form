@@ -2,6 +2,7 @@
 
 session_start();
 session_unset();
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -197,7 +198,7 @@ not usually noted with Rugby.
 		  </div>
 		</td>
 		<td>
-			  <input type="checkbox" name="symptom[]" value="Don't feel right">
+			  <input type="checkbox" name="symptom[]" value="Dont feel right">
 		</td>
   </tr>
     <tr>
